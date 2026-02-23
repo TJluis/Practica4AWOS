@@ -5,10 +5,10 @@ app = Flask(__name__)
 def productos():
     import mysql.connector
     mydb = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="",
-        database="concencionario"
+        host="46.28.42.226",
+        user="u760464709_prueba_usr",
+        password="|Au/mc*H2jH3",
+        database="u760464709_prueba_bd"
     )
 
     mycursor = mydb.cursor()
