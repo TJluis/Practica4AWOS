@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, make_response, session
 app = Flask(__name__)
 
-@app.route('/producto')
+@app.route('/productos')
 def productos():
     import mysql.connector
     mydb = mysql.connector.connect(
@@ -12,7 +12,7 @@ def productos():
     )
 
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM concencionaria")
+    mycursor.execute("SELECT * FROM productos")
     myresult = mycursor.fetchall()
     return make_response(jsonify(myresult))
 
